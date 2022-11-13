@@ -18,3 +18,13 @@ To (locally) reproduce this project, do the following:
 
 This will install all necessary packages for you to be able to run the scripts and
 everything should work out of the box, including correctly finding local paths.
+
+## IJulia Jupyter notebook setup
+
+``` julia
+]add IJulia
+using IJulia
+nthreads = 8 # how many cores does your computer have?
+installkernel("Julia", env=Dict("JULIA_NUM_THREADS"=>"$nthreads"))
+```
+
